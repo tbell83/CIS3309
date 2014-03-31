@@ -74,6 +74,10 @@ namespace customer
                     results.Add(movies.IndexOf(item));
                 }else if(String.Compare(item.getGenre().ToUpper(), search) == 0){
                     results.Add(movies.IndexOf(item));
+                }else if(item.getName().ToUpper().Contains(search)){
+                    results.Add(movies.IndexOf(item));
+                }else if(item.getDescription().ToUpper().Contains(search)){
+                    results.Add(movies.IndexOf(item));
                 }
             }
             return results;
