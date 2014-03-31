@@ -10,10 +10,10 @@ namespace customer{
         private int status;
 
         public Movie(string name, string rating, string genre, int status, string description){
-            name = this.name;
-            rating = this.rating;
-            genre = this.genre;
-            status = this.status;
+            this.name = name;
+            this.rating = rating;
+            this.genre = genre;
+            this.status = status;
         }
 
         public string Name(){

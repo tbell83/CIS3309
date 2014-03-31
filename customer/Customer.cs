@@ -14,12 +14,13 @@ namespace customer
         private DateTime DOB;
 
         public Customer(string FName, string LName, string address, string phone, double balance, DateTime DOB, string CID){
-            FName = this.FName;
-            LName = this.LName;
-            address = this.address;
-            phone = this.phone;
-            balance = this.balance;
-            DOB = this.DOB;
+            this.FName = FName;
+            this.LName = LName;
+            this.address = address;
+            this.phone = phone;
+            this.balance = balance;
+            this.DOB = DOB;
+            this.CID = CID;
         }
 
         public double getBalance(){
@@ -51,7 +52,7 @@ namespace customer
         }
 
         public void changeAddress(string address){
-            address = this.address;
+            this.address = address;
         }
 
         public void changeBalance(double change){
