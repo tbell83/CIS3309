@@ -7,10 +7,10 @@ using System.Collections;
 
 namespace customer
 {
-    class MovieRentalSystem
+    public class MovieRentalSystem
     {
-        ArrayList movies = new ArrayList();
-        ArrayList customers = new ArrayList();
+        List<Movie> movies = new List<Movie>();
+        List<Customer> customers = new List<Customer>();
 
         public MovieRentalSystem(){}
 
@@ -38,20 +38,27 @@ namespace customer
             customers.Add(customer);
         }
 
+        public Customer getCustomer(int index){
+            return customers[index];
+        }
+
+        public Movie getMovie(int index){
+            return movies[index];
+        }
+
         public ArrayList findCustomer(string search){
             ArrayList results = new ArrayList();
-            search = search.ToUpper();
             foreach(Customer item in customers){
                 if (String.Compare(item.fullName().ToUpper(), search.ToUpper()) == 0){
-                    results.Add(item);
+                    results.Add(customers.IndexOf(item));
                 } else if(String.Compare(item.getFName().ToUpper(), search.ToUpper()) == 0){
-                    results.Add(item);
+                    results.Add(customers.IndexOf(item));
                 } else if(String.Compare(item.getLName().ToUpper(), search.ToUpper()) == 0){
-                    results.Add(item);
+                    results.Add(customers.IndexOf(item));
                 } else if (String.Compare(item.getPhone(), search) == 0){
-                    results.Add(item);
+                    results.Add(customers.IndexOf(item));
                 } else if (String.Compare(item.getAddress().ToUpper(), search.ToUpper()) == 0){
-                    results.Add(item);
+                    results.Add(customers.IndexOf(item));
                 }
             }
             return results;
@@ -62,11 +69,11 @@ namespace customer
             search = search.ToUpper();
             foreach(Movie item in movies){
                 if (String.Compare(item.getName().ToUpper(), search) == 0){
-                    results.Add(item);
+                    results.Add(movies.IndexOf(item));
                 }else if(String.Compare(item.getRating().ToUpper(), search) == 0 ){
-                    results.Add(item);
+                    results.Add(movies.IndexOf(item));
                 }else if(String.Compare(item.getGenre().ToUpper(), search) == 0){
-                    results.Add(item);
+                    results.Add(movies.IndexOf(item));
                 }
             }
             return results;
