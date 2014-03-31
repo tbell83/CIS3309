@@ -33,7 +33,7 @@ namespace customer
             string phone = user[3];
             double balance = Convert.ToDouble(user[4]);
             DateTime DOB = Convert.ToDateTime(user[5]);
-            string CID = user[6];
+            int CID = Convert.ToInt16(user[6]);
             Customer customer = new Customer(FName, LName, address, phone, balance, DOB, CID);
             customers.Add(customer);
         }
@@ -61,11 +61,11 @@ namespace customer
             ArrayList results = new ArrayList();
             search = search.ToUpper();
             foreach(Movie item in movies){
-                if (String.Compare(item.Name().ToUpper(), search) == 0){
+                if (String.Compare(item.getName().ToUpper(), search) == 0){
                     results.Add(item);
-                }else if(String.Compare(item.Rating().ToUpper(), search) == 0 ){
+                }else if(String.Compare(item.getRating().ToUpper(), search) == 0 ){
                     results.Add(item);
-                }else if(String.Compare(item.Genre().ToUpper(), search) == 0){
+                }else if(String.Compare(item.getGenre().ToUpper(), search) == 0){
                     results.Add(item);
                 }
             }

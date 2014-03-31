@@ -9,11 +9,12 @@ namespace customer
 {
     public class Customer
     {
-        private string FName, LName, address, phone, CID;
+        private string FName, LName, address, phone;
         private double balance;
+        private int CID;
         private DateTime DOB;
 
-        public Customer(string FName, string LName, string address, string phone, double balance, DateTime DOB, string CID){
+        public Customer(string FName, string LName, string address, string phone, double balance, DateTime DOB, int CID){
             this.FName = FName;
             this.LName = LName;
             this.address = address;
@@ -43,7 +44,7 @@ namespace customer
             return phone;
         }
 
-        public string getCID(){
+        public int getCID(){
             return CID;
         }
 
