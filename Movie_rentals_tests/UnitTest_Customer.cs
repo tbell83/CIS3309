@@ -13,7 +13,7 @@ namespace Movie_rentals_tests
         string test_phone = "8883336666";
         double test_balance = 0.00;
         DateTime test_DOB = new DateTime(1983,10,28);
-        string test_CID = "0001";
+        int test_CID = 0001;
 
         [TestMethod]
         public void TestCustomer(){
