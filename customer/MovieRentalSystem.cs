@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 
-namespace customer
+namespace Movie_Rental_System
 {
     public class MovieRentalSystem
     {

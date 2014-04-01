@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using customer;
+using Movie_Rental_System;
 using System.Collections;
 using System.Collections.Generic;
 

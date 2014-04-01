@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using customer;
+using Movie_Rental_System;
 
 namespace Movie_rentals_tests
 {

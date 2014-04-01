@@ -7,8 +7,8 @@
     <ProjectGuid>{272ECEB0-0910-4324-895D-47F43FF299D1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>customer</RootNamespace>
-    <AssemblyName>customer</AssemblyName>
+    <RootNamespace>MovieRentalSystem</RootNamespace>
+    <AssemblyName>MovieRentalSystem</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
