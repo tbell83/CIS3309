@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieRentalSystem{
+namespace Movie_Rental_System{
     public class Movie{
         private string name, rating, genre, description;
         private int status;
