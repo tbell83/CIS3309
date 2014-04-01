@@ -46,41 +46,48 @@ namespace customer
             return movies[index];
         }
 
-        public ArrayList findCustomer(string search){
-            ArrayList results = new ArrayList();
+        public List<int> findCustomer(string search){
+            List<int> results = new List<int>();
             foreach(Customer item in customers){
-                if (String.Compare(item.fullName().ToUpper(), search.ToUpper()) == 0){
+                if (String.Compare(item.fullName(), search, true) == 0){
                     results.Add(customers.IndexOf(item));
-                } else if(String.Compare(item.getFName().ToUpper(), search.ToUpper()) == 0){
+                } else if (String.Compare(item.getFName(), search, true) == 0){
                     results.Add(customers.IndexOf(item));
-                } else if(String.Compare(item.getLName().ToUpper(), search.ToUpper()) == 0){
+                } else if (String.Compare(item.getLName(), search, true) == 0){
                     results.Add(customers.IndexOf(item));
                 } else if (String.Compare(item.getPhone(), search) == 0){
                     results.Add(customers.IndexOf(item));
-                } else if (String.Compare(item.getAddress().ToUpper(), search.ToUpper()) == 0){
+                } else if (String.Compare(item.getAddress(), search, true) == 0){
                     results.Add(customers.IndexOf(item));
                 }
             }
             return results;
         }
 
-        public ArrayList findMovie(string search){
-            ArrayList results = new ArrayList();
-            search = search.ToUpper();
+        public List<int> findMovie(string search){
+            List<int> results = new List<int>();
             foreach(Movie item in movies){
-                if (String.Compare(item.getName().ToUpper(), search) == 0){
+                if (String.Compare(item.getName(), search, true) == 0){
                     results.Add(movies.IndexOf(item));
-                }else if(String.Compare(item.getRating().ToUpper(), search) == 0 ){
+                } else if (String.Compare(item.getRating(), search, true) == 0){
                     results.Add(movies.IndexOf(item));
-                }else if(String.Compare(item.getGenre().ToUpper(), search) == 0){
+                } else if (String.Compare(item.getGenre(), search, true) == 0){
                     results.Add(movies.IndexOf(item));
-                }else if(item.getName().ToUpper().Contains(search)){
+                }else if(item.getName().Contains(search)){
                     results.Add(movies.IndexOf(item));
-                }else if(item.getDescription().ToUpper().Contains(search)){
+                }else if(item.getDescription().Contains(search)){
                     results.Add(movies.IndexOf(item));
                 }
             }
             return results;
+        }
+
+        public void removeCustomer(int index){
+            customers.RemoveAt(index);
+        }
+
+        public void removeMovie(int index){
+            movies.RemoveAt(index);
         }
     }
 }

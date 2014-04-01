@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using customer;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Movie_rentals_tests
 {
@@ -35,10 +36,12 @@ namespace Movie_rentals_tests
             MRS.addCustomer(test_customer1);
             MRS.addCustomer(test_customer2);
             MRS.addCustomer(test_customer3);
-            ArrayList results = new ArrayList();
-            results = MRS.findCustomer("Bob");
-            foreach(int item in results){
-                Assert.AreEqual("Bob", MRS.getCustomer(Convert.ToInt16(item)).getFName());
+            string[] test_names = {"Bob","BOB","bob","Hope","Barker","Bob Barker"};
+            foreach(string name in test_names){
+                List<int> results = MRS.findCustomer(name);
+                foreach(int item in results){
+                    Assert.AreEqual("Bob", MRS.getCustomer(item).getFName());
+                }
             }
         }
 
@@ -48,11 +51,30 @@ namespace Movie_rentals_tests
             MRS.addMovie(test_movie1);
             MRS.addMovie(test_movie2);
             MRS.addMovie(test_movie3);
-            ArrayList results = new ArrayList();
-            results = MRS.findMovie("Terminator");
+            List<int> results = MRS.findMovie("Terminator");
             foreach(int item in results){
-                Assert.IsTrue(MRS.getMovie(Convert.ToInt16(item)).getName().Contains("Terminator"));
+                Assert.IsTrue(MRS.getMovie(item).getName().Contains("Terminator"));
             }
+        }
+
+        [TestMethod]
+        public void TestRemoveCustomer(){
+            MovieRentalSystem MRS = new MovieRentalSystem();
+            MRS.addCustomer(test_customer1);
+            MRS.addCustomer(test_customer2);
+            MRS.addCustomer(test_customer3);
+            List<int> results = MRS.findCustomer("Bob");
+            results.ForEach(delegate(int item) { MRS.removeCustomer(item); });
+        }
+
+        [TestMethod]
+        public void TestRemoveMovie(){
+            MovieRentalSystem MRS = new MovieRentalSystem();
+            MRS.addMovie(test_movie1);
+            MRS.addMovie(test_movie2);
+            MRS.addMovie(test_movie3);
+            List<int> results = MRS.findMovie("Blade Runner");
+            results.ForEach(delegate(int item) { MRS.removeMovie(item); });
         }
     }
 }
