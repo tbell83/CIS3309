@@ -17,7 +17,7 @@ namespace Movie_Rental_System{
             this.description = description;
         }
 
-        public string ToString()
+        public override string ToString()
         {
             string status;
             if(getStatus() == 0){
