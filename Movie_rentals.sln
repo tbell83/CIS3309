@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie_rentals_tests", "Movi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRentalGUI", "MovieRentalGUI\MovieRentalGUI.csproj", "{02940593-AC5F-4E4A-8AE4-FFDD5BCD6193}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileReader", "FileReader\FileReader.csproj", "{29345EDD-9E27-44B6-8483-862ABE98A595}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{02940593-AC5F-4E4A-8AE4-FFDD5BCD6193}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02940593-AC5F-4E4A-8AE4-FFDD5BCD6193}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02940593-AC5F-4E4A-8AE4-FFDD5BCD6193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29345EDD-9E27-44B6-8483-862ABE98A595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29345EDD-9E27-44B6-8483-862ABE98A595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29345EDD-9E27-44B6-8483-862ABE98A595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29345EDD-9E27-44B6-8483-862ABE98A595}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

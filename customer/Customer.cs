@@ -5,10 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 
-namespace Movie_Rental_System
-{
-    public class Customer
-    {
+namespace Movie_Rental_System{
+    public class Customer{
         private string FName, LName, address, phone;
         private double balance;
         private int CID;
@@ -24,8 +22,7 @@ namespace Movie_Rental_System
             this.CID = CID;
         }
 
-        public override string ToString()
-        {
+        public override string ToString(){
             string output = getFName() + " " + getLName() + ", " + getAddress() + ", " + getPhone() + ", " + getDOB().ToShortDateString() + ", " + getCID();
             return output;
         }
@@ -58,8 +55,7 @@ namespace Movie_Rental_System
             return address;
         }
 
-        public DateTime getDOB()
-        {
+        public DateTime getDOB(){
             return DOB;
         }
 

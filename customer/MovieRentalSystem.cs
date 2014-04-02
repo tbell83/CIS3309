@@ -5,10 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 
-namespace Movie_Rental_System
-{
-    public class MovieRentalSystem
-    {
+namespace Movie_Rental_System{
+    public class MovieRentalSystem{
         List<Movie> movies = new List<Movie>();
         List<Customer> customers = new List<Customer>();
 
@@ -46,12 +44,10 @@ namespace Movie_Rental_System
             return movies[index];
         }
 
-        public string listMovie(int index)
-        {
+        public string listMovie(int index){
             return movies[index].ToString();
         }
-        public string listCustomer(int index)
-        {
+        public string listCustomer(int index){
             return customers[index].ToString();
         }
 
@@ -66,7 +62,7 @@ namespace Movie_Rental_System
                     results.Add(customers.IndexOf(item));
                 } else if (String.Compare(item.getPhone(), search) == 0){
                     results.Add(customers.IndexOf(item));
-                } else if (String.Compare(item.getAddress(), search, true) == 0){
+                } else if (item.getAddress().ToUpper().Contains(search.ToUpper())){
                     results.Add(customers.IndexOf(item));
                 }
             }
@@ -74,13 +70,14 @@ namespace Movie_Rental_System
         }
 
         public List<int> findMovie(string search){
+            search = search.ToUpper();
             List<int> results = new List<int>();
             foreach(Movie item in movies){
-                if (String.Compare(item.getName(), search, true) == 0){
+                if (item.getName().ToUpper().Contains(search)){
                     results.Add(movies.IndexOf(item));
                 } else if (String.Compare(item.getRating(), search, true) == 0){
                     results.Add(movies.IndexOf(item));
-                } else if (String.Compare(item.getGenre(), search, true) == 0){
+                } else if (item.getGenre().ToUpper().Contains(search)){
                     results.Add(movies.IndexOf(item));
                 }else if(item.getName().Contains(search)){
                     results.Add(movies.IndexOf(item));

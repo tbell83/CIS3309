@@ -82,6 +82,10 @@
       <Project>{272eceb0-0910-4324-895d-47f43ff299d1}</Project>
       <Name>Movie_rentals</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FileReader\FileReader.csproj">
+      <Project>{29345edd-9e27-44b6-8483-862abe98a595}</Project>
+      <Name>FileReader</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
