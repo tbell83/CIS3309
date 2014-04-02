@@ -51,7 +51,7 @@ namespace MovieRentalGUI
                 List<int> results = MRS.findCustomer(query);
                 foreach (int item in results)
                 {
-                    listBox1.Items.Add(MRS.getCustomer(item).fullName());
+                    listBox1.Items.Add(MRS.listCustomer(item));
                 }
             }
         }

@@ -50,6 +50,10 @@ namespace Movie_Rental_System
         {
             return movies[index].ToString();
         }
+        public string listCustomer(int index)
+        {
+            return customers[index].ToString();
+        }
 
         public List<int> findCustomer(string search){
             List<int> results = new List<int>();

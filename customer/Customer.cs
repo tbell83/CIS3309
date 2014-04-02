@@ -24,6 +24,12 @@ namespace Movie_Rental_System
             this.CID = CID;
         }
 
+        public string ToString()
+        {
+            string output = getFName() + " " + getLName() + " " + getAddress() + " " + getPhone() + " " + getDOB() + " " + getCID();
+            return output;
+        }
+
         public double getBalance(){
             return balance;
         }
@@ -50,6 +56,11 @@ namespace Movie_Rental_System
 
         public string getAddress(){
             return address;
+        }
+
+        public DateTime getDOB()
+        {
+            return DOB;
         }
 
         public void changeAddress(string address){
