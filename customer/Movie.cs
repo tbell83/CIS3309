@@ -17,6 +17,18 @@ namespace Movie_Rental_System{
             this.description = description;
         }
 
+        public string ToString()
+        {
+            string status;
+            if(getStatus() == 0){
+                status = "Available";
+            }else{
+                status = "Rented Out";
+            }
+            string output = getName() + " " + getRating() + " " + getGenre() + " " + status;
+            return output;
+        }
+
         public string getName(){
             return name;
         }

@@ -46,6 +46,11 @@ namespace Movie_Rental_System
             return movies[index];
         }
 
+        public string listMovie(int index)
+        {
+            return movies[index].ToString();
+        }
+
         public List<int> findCustomer(string search){
             List<int> results = new List<int>();
             foreach(Customer item in customers){
