@@ -19,6 +19,7 @@ namespace MovieRentalGUI
         string test_customer1 = "Bob;Hope;10 Main Street;9993336666;0.00;1983/10/28;9988";
         string test_customer2 = "Bob;Barker;10 Road Street;888666444;0.00;1980/1/1;9938";
         string test_customer3 = "Tina;Roberts;82 Street Lane;8884442222;57.00;1950/1/31;9977";
+        string test_customer4 = "Sonya;Blade;64 Terminator Lane;8884342222;59.00;1950/12/31;9477";
 
         MovieRentalSystem MRS = new MovieRentalSystem();
 
@@ -31,6 +32,7 @@ namespace MovieRentalGUI
             MRS.addCustomer(test_customer1);
             MRS.addCustomer(test_customer2);
             MRS.addCustomer(test_customer3);
+            MRS.addCustomer(test_customer4);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -51,7 +53,23 @@ namespace MovieRentalGUI
                 List<int> results = MRS.findCustomer(query);
                 foreach (int item in results)
                 {
-                    listBox1.Items.Add(MRS.listCustomer(item));
+                    string output = MRS.listCustomer(item);
+                    listBox1.Items.Add(output);
+                }
+            }
+            else
+            {
+                List<int> cust_results = MRS.findCustomer(query);
+                List<int> movi_results = MRS.findMovie(query);
+                foreach (int item in cust_results)
+                {
+                    string output = MRS.listCustomer(item);
+                    listBox1.Items.Add(output);
+                }
+                foreach (int item in movi_results)
+                {
+                    string output = MRS.listMovie(item);
+                    listBox1.Items.Add(output);
                 }
             }
         }

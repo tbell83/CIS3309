@@ -26,7 +26,7 @@ namespace Movie_Rental_System
 
         public string ToString()
         {
-            string output = getFName() + " " + getLName() + " " + getAddress() + " " + getPhone() + " " + getDOB() + " " + getCID();
+            string output = getFName() + " " + getLName() + ", " + getAddress() + ", " + getPhone() + ", " + getDOB().ToShortDateString() + ", " + getCID();
             return output;
         }
 

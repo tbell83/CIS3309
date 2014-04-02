@@ -25,7 +25,7 @@ namespace Movie_Rental_System{
             }else{
                 status = "Rented Out";
             }
-            string output = getName() + " " + getRating() + " " + getGenre() + " " + status;
+            string output = getName() + ", " + getRating() + ", " + getGenre() + ", " + status;
             return output;
         }
 
