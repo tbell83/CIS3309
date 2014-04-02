@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace videoRentalSystem
+namespace Movie_Rental_System
 {
     public partial class frmRentalOptions : Form
     {

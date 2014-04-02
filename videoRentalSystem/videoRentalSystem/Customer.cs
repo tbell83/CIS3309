@@ -5,21 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 
-namespace videoRentalSystem
+namespace Movie_Rental_System
 {
     public class Customer
     {
-        private string FName, LName, address, phone, CID;
+        private string FName, LName, address, phone;
         private double balance;
+        private int CID;
         private DateTime DOB;
 
-        public Customer(string FName, string LName, string address, string phone, double balance, DateTime DOB, string CID){
-            FName = this.FName;
-            LName = this.LName;
-            address = this.address;
-            phone = this.phone;
-            balance = this.balance;
-            DOB = this.DOB;
+        public Customer(string FName, string LName, string address, string phone, double balance, DateTime DOB, int CID){
+            this.FName = FName;
+            this.LName = LName;
+            this.address = address;
+            this.phone = phone;
+            this.balance = balance;
+            this.DOB = DOB;
+            this.CID = CID;
         }
 
         public double getBalance(){
@@ -42,7 +44,7 @@ namespace videoRentalSystem
             return phone;
         }
 
-        public string getCID(){
+        public int getCID(){
             return CID;
         }
 
@@ -51,7 +53,7 @@ namespace videoRentalSystem
         }
 
         public void changeAddress(string address){
-            address = this.address;
+            this.address = address;
         }
 
         public void changeBalance(double change){

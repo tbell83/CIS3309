@@ -1,4 +1,4 @@
-﻿namespace videoRentalSystem
+﻿namespace Movie_Rental_System
 {
     partial class frmCustomerOptions
     {
@@ -106,6 +106,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
             this.txtFirstName.TabIndex = 5;
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // txtLastName
             // 

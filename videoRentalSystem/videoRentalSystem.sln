@@ -1,7 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "videoRentalSystem", "videoRentalSystem\videoRentalSystem.csproj", "{11D72206-6A77-43E1-B469-D9B52630EBF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie_Rental_System", "videoRentalSystem\Movie_Rental_System.csproj", "{11D72206-6A77-43E1-B469-D9B52630EBF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3C5AE3FE-B381-41A9-BBE9-2F035C7E4678}"
+	ProjectSection(SolutionItems) = preProject
+		videoRentalSystem\Customer.cs = videoRentalSystem\Customer.cs
+		videoRentalSystem\Movie.cs = videoRentalSystem\Movie.cs
+		videoRentalSystem\MovieRentalSystem.cs = videoRentalSystem\MovieRentalSystem.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace videoRentalSystem
+namespace Movie_Rental_System
 {
     public partial class frmMovieOptions : Form
     {
@@ -25,6 +25,11 @@ namespace videoRentalSystem
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmMovieOptions_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

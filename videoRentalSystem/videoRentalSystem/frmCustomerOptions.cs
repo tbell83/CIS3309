@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace videoRentalSystem
+namespace Movie_Rental_System
 {
     public partial class frmCustomerOptions : Form
     {
@@ -47,12 +47,96 @@ namespace videoRentalSystem
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
-            firstName = txtFirstName.Text;
-            lastName = txtLastName.Text;
-            address = txtAddress.Text;
-            phoneNumber = txtPhoneNumber.Text;
-            balance = txtBalance.Text;
-            dateOfBirth = txtDoB.Text;
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtFirstName.Text))
+                {
+                    txtFirstName.BackColor.Equals(Color.Red);
+                    MessageBox.Show("Please input first name.");
+                }
+                else
+                    firstName = txtFirstName.Text;
+
+            }
+            catch
+            {
+                MessageBox.Show("Please input first name.");
+                txtFirstName.BackColor.Equals(Color.Red);
+            }
+
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtFirstName.Text))
+                {
+                    txtFirstName.BackColor.Equals(Color.Red);
+                    MessageBox.Show("Please input last name.");
+                }
+                else
+                    lastName = txtLastName.Text;
+            }
+            catch
+            {
+                MessageBox.Show("Please input last name.");
+            }
+
+
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtFirstName.Text))
+                {
+                    txtFirstName.BackColor.Equals(Color.Red);
+                    MessageBox.Show("Please input address.");
+                }
+                else
+                    address = txtAddress.Text;
+            }
+            catch
+            {
+                MessageBox.Show("Please input address.");
+            }
+
+
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtFirstName.Text))
+                {
+                    txtFirstName.BackColor.Equals(Color.Red);
+                    MessageBox.Show("Please input phone number.");
+                }
+                else
+                    phoneNumber = txtPhoneNumber.Text;
+            }
+            catch
+            {
+                MessageBox.Show("Please input phone number.");
+            }
+
+
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtFirstName.Text))
+                {
+                    txtFirstName.BackColor.Equals(Color.Red);
+                    MessageBox.Show("Please input balance.");
+                }
+                else
+                    balance = txtBalance.Text;
+            }
+            catch
+            {
+                MessageBox.Show("Please input balance.");
+            }
+
+
+
+            try
+            {
+                dateOfBirth = txtDoB.Text;
+            }
+            catch
+            {
+                MessageBox.Show("Please input date of birth.");
+            }
 
 
             try
@@ -64,7 +148,7 @@ namespace videoRentalSystem
                 }
                 else
                 {
-                    MessageBox.Show("Please only enter 4 digits");
+                    MessageBox.Show("Please enter 4 digits");
                     txtCustomerID.Clear();
                 }
             }
@@ -79,9 +163,7 @@ namespace videoRentalSystem
 
             try
             {
-                //Read in the text file/database
-                //See if duplicate ID exists
-                //go to catch
+                //   if(rentalSystem.findCustomer(txtCustomerID.Text) = false);
             }
             catch
             {
@@ -95,13 +177,19 @@ namespace videoRentalSystem
             rentalSystem.addCustomer(input);
         }
 
+
+
+
         private void btnDeleteCustomer_Click(object sender, EventArgs e)
         {
-            string findID = txtCustomerID.Text;
-            if (findID != null)
-            {
 
-            }
+        }
+
+
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

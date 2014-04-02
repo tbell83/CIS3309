@@ -1,4 +1,4 @@
-﻿namespace videoRentalSystem
+﻿namespace Movie_Rental_System
 {
     partial class frmWelcome
     {

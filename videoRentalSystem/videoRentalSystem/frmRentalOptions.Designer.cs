@@ -1,4 +1,4 @@
-﻿namespace videoRentalSystem
+﻿namespace Movie_Rental_System
 {
     partial class frmRentalOptions
     {
@@ -32,6 +32,13 @@
             this.btnReturnMovie = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.gBoxRental = new System.Windows.Forms.GroupBox();
+            this.radSciFi = new System.Windows.Forms.RadioButton();
+            this.radKids = new System.Windows.Forms.RadioButton();
+            this.radHorror = new System.Windows.Forms.RadioButton();
+            this.radFantasy = new System.Windows.Forms.RadioButton();
+            this.radComedy = new System.Windows.Forms.RadioButton();
+            this.radAdventure = new System.Windows.Forms.RadioButton();
+            this.radAction = new System.Windows.Forms.RadioButton();
             this.lblRating = new System.Windows.Forms.Label();
             this.radNCST = new System.Windows.Forms.RadioButton();
             this.radR = new System.Windows.Forms.RadioButton();
@@ -41,15 +48,10 @@
             this.txtMovieTitle = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblGenre = new System.Windows.Forms.Label();
-            this.radAction = new System.Windows.Forms.RadioButton();
-            this.radAdventure = new System.Windows.Forms.RadioButton();
-            this.radComedy = new System.Windows.Forms.RadioButton();
-            this.radFantasy = new System.Windows.Forms.RadioButton();
-            this.radHorror = new System.Windows.Forms.RadioButton();
-            this.radKids = new System.Windows.Forms.RadioButton();
-            this.radSciFi = new System.Windows.Forms.RadioButton();
             this.gBoxAvalible = new System.Windows.Forms.GroupBox();
             this.txtIsAvalible = new System.Windows.Forms.TextBox();
+            this.lblCIDTakeout = new System.Windows.Forms.Label();
+            this.txtCIDCheckout = new System.Windows.Forms.TextBox();
             this.gBoxRental.SuspendLayout();
             this.gBoxAvalible.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +86,8 @@
             // 
             // gBoxRental
             // 
+            this.gBoxRental.Controls.Add(this.txtCIDCheckout);
+            this.gBoxRental.Controls.Add(this.lblCIDTakeout);
             this.gBoxRental.Controls.Add(this.radSciFi);
             this.gBoxRental.Controls.Add(this.radKids);
             this.gBoxRental.Controls.Add(this.radHorror);
@@ -106,6 +110,83 @@
             this.gBoxRental.TabIndex = 6;
             this.gBoxRental.TabStop = false;
             this.gBoxRental.Text = "Rental Options";
+            // 
+            // radSciFi
+            // 
+            this.radSciFi.AutoSize = true;
+            this.radSciFi.Location = new System.Drawing.Point(107, 154);
+            this.radSciFi.Name = "radSciFi";
+            this.radSciFi.Size = new System.Drawing.Size(51, 17);
+            this.radSciFi.TabIndex = 21;
+            this.radSciFi.TabStop = true;
+            this.radSciFi.Text = "Sci-Fi";
+            this.radSciFi.UseVisualStyleBackColor = true;
+            // 
+            // radKids
+            // 
+            this.radKids.AutoSize = true;
+            this.radKids.Location = new System.Drawing.Point(107, 131);
+            this.radKids.Name = "radKids";
+            this.radKids.Size = new System.Drawing.Size(45, 17);
+            this.radKids.TabIndex = 20;
+            this.radKids.TabStop = true;
+            this.radKids.Text = "Kids";
+            this.radKids.UseVisualStyleBackColor = true;
+            // 
+            // radHorror
+            // 
+            this.radHorror.AutoSize = true;
+            this.radHorror.Location = new System.Drawing.Point(107, 108);
+            this.radHorror.Name = "radHorror";
+            this.radHorror.Size = new System.Drawing.Size(54, 17);
+            this.radHorror.TabIndex = 19;
+            this.radHorror.TabStop = true;
+            this.radHorror.Text = "Horror";
+            this.radHorror.UseVisualStyleBackColor = true;
+            // 
+            // radFantasy
+            // 
+            this.radFantasy.AutoSize = true;
+            this.radFantasy.Location = new System.Drawing.Point(10, 177);
+            this.radFantasy.Name = "radFantasy";
+            this.radFantasy.Size = new System.Drawing.Size(62, 17);
+            this.radFantasy.TabIndex = 18;
+            this.radFantasy.TabStop = true;
+            this.radFantasy.Text = "Fantasy";
+            this.radFantasy.UseVisualStyleBackColor = true;
+            // 
+            // radComedy
+            // 
+            this.radComedy.AutoSize = true;
+            this.radComedy.Location = new System.Drawing.Point(10, 154);
+            this.radComedy.Name = "radComedy";
+            this.radComedy.Size = new System.Drawing.Size(63, 17);
+            this.radComedy.TabIndex = 17;
+            this.radComedy.TabStop = true;
+            this.radComedy.Text = "Comedy";
+            this.radComedy.UseVisualStyleBackColor = true;
+            // 
+            // radAdventure
+            // 
+            this.radAdventure.AutoSize = true;
+            this.radAdventure.Location = new System.Drawing.Point(10, 131);
+            this.radAdventure.Name = "radAdventure";
+            this.radAdventure.Size = new System.Drawing.Size(74, 17);
+            this.radAdventure.TabIndex = 16;
+            this.radAdventure.TabStop = true;
+            this.radAdventure.Text = "Adventure";
+            this.radAdventure.UseVisualStyleBackColor = true;
+            // 
+            // radAction
+            // 
+            this.radAction.AutoSize = true;
+            this.radAction.Location = new System.Drawing.Point(10, 108);
+            this.radAction.Name = "radAction";
+            this.radAction.Size = new System.Drawing.Size(55, 17);
+            this.radAction.TabIndex = 15;
+            this.radAction.TabStop = true;
+            this.radAction.Text = "Action";
+            this.radAction.UseVisualStyleBackColor = true;
             // 
             // lblRating
             // 
@@ -196,83 +277,6 @@
             this.lblGenre.TabIndex = 6;
             this.lblGenre.Text = "Genre(Select One)";
             // 
-            // radAction
-            // 
-            this.radAction.AutoSize = true;
-            this.radAction.Location = new System.Drawing.Point(10, 108);
-            this.radAction.Name = "radAction";
-            this.radAction.Size = new System.Drawing.Size(55, 17);
-            this.radAction.TabIndex = 15;
-            this.radAction.TabStop = true;
-            this.radAction.Text = "Action";
-            this.radAction.UseVisualStyleBackColor = true;
-            // 
-            // radAdventure
-            // 
-            this.radAdventure.AutoSize = true;
-            this.radAdventure.Location = new System.Drawing.Point(10, 131);
-            this.radAdventure.Name = "radAdventure";
-            this.radAdventure.Size = new System.Drawing.Size(74, 17);
-            this.radAdventure.TabIndex = 16;
-            this.radAdventure.TabStop = true;
-            this.radAdventure.Text = "Adventure";
-            this.radAdventure.UseVisualStyleBackColor = true;
-            // 
-            // radComedy
-            // 
-            this.radComedy.AutoSize = true;
-            this.radComedy.Location = new System.Drawing.Point(10, 154);
-            this.radComedy.Name = "radComedy";
-            this.radComedy.Size = new System.Drawing.Size(63, 17);
-            this.radComedy.TabIndex = 17;
-            this.radComedy.TabStop = true;
-            this.radComedy.Text = "Comedy";
-            this.radComedy.UseVisualStyleBackColor = true;
-            // 
-            // radFantasy
-            // 
-            this.radFantasy.AutoSize = true;
-            this.radFantasy.Location = new System.Drawing.Point(10, 177);
-            this.radFantasy.Name = "radFantasy";
-            this.radFantasy.Size = new System.Drawing.Size(62, 17);
-            this.radFantasy.TabIndex = 18;
-            this.radFantasy.TabStop = true;
-            this.radFantasy.Text = "Fantasy";
-            this.radFantasy.UseVisualStyleBackColor = true;
-            // 
-            // radHorror
-            // 
-            this.radHorror.AutoSize = true;
-            this.radHorror.Location = new System.Drawing.Point(107, 108);
-            this.radHorror.Name = "radHorror";
-            this.radHorror.Size = new System.Drawing.Size(54, 17);
-            this.radHorror.TabIndex = 19;
-            this.radHorror.TabStop = true;
-            this.radHorror.Text = "Horror";
-            this.radHorror.UseVisualStyleBackColor = true;
-            // 
-            // radKids
-            // 
-            this.radKids.AutoSize = true;
-            this.radKids.Location = new System.Drawing.Point(107, 131);
-            this.radKids.Name = "radKids";
-            this.radKids.Size = new System.Drawing.Size(45, 17);
-            this.radKids.TabIndex = 20;
-            this.radKids.TabStop = true;
-            this.radKids.Text = "Kids";
-            this.radKids.UseVisualStyleBackColor = true;
-            // 
-            // radSciFi
-            // 
-            this.radSciFi.AutoSize = true;
-            this.radSciFi.Location = new System.Drawing.Point(107, 154);
-            this.radSciFi.Name = "radSciFi";
-            this.radSciFi.Size = new System.Drawing.Size(51, 17);
-            this.radSciFi.TabIndex = 21;
-            this.radSciFi.TabStop = true;
-            this.radSciFi.Text = "Sci-Fi";
-            this.radSciFi.UseVisualStyleBackColor = true;
-            // 
             // gBoxAvalible
             // 
             this.gBoxAvalible.Controls.Add(this.txtIsAvalible);
@@ -289,6 +293,22 @@
             this.txtIsAvalible.Name = "txtIsAvalible";
             this.txtIsAvalible.Size = new System.Drawing.Size(100, 20);
             this.txtIsAvalible.TabIndex = 0;
+            // 
+            // lblCIDTakeout
+            // 
+            this.lblCIDTakeout.AutoSize = true;
+            this.lblCIDTakeout.Location = new System.Drawing.Point(251, 20);
+            this.lblCIDTakeout.Name = "lblCIDTakeout";
+            this.lblCIDTakeout.Size = new System.Drawing.Size(84, 13);
+            this.lblCIDTakeout.TabIndex = 22;
+            this.lblCIDTakeout.Text = "CID of Customer";
+            // 
+            // txtCIDCheckout
+            // 
+            this.txtCIDCheckout.Location = new System.Drawing.Point(254, 36);
+            this.txtCIDCheckout.Name = "txtCIDCheckout";
+            this.txtCIDCheckout.Size = new System.Drawing.Size(100, 20);
+            this.txtCIDCheckout.TabIndex = 23;
             // 
             // frmRentalOptions
             // 
@@ -334,6 +354,8 @@
         private System.Windows.Forms.RadioButton radKids;
         private System.Windows.Forms.GroupBox gBoxAvalible;
         private System.Windows.Forms.TextBox txtIsAvalible;
+        private System.Windows.Forms.TextBox txtCIDCheckout;
+        private System.Windows.Forms.Label lblCIDTakeout;
 
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace videoRentalSystem
+﻿namespace Movie_Rental_System
 {
     partial class frmMovieOptions
     {
@@ -29,19 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rtxtDescription = new System.Windows.Forms.RichTextBox();
-            this.txtAvalible = new System.Windows.Forms.TextBox();
-            this.txtTitle = new System.Windows.Forms.TextBox();
-            this.lblNumberAvalible = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.btnAddMovie = new System.Windows.Forms.Button();
-            this.btnDeleteMovie = new System.Windows.Forms.Button();
-            this.btnWriteMovieText = new System.Windows.Forms.Button();
-            this.btnReadMovieText = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnPreviousMovie = new System.Windows.Forms.Button();
-            this.btnNextMovie = new System.Windows.Forms.Button();
             this.radSciFi = new System.Windows.Forms.RadioButton();
             this.radKids = new System.Windows.Forms.RadioButton();
             this.radHorror = new System.Windows.Forms.RadioButton();
@@ -56,6 +43,19 @@
             this.radPG = new System.Windows.Forms.RadioButton();
             this.radG = new System.Windows.Forms.RadioButton();
             this.lblGenre = new System.Windows.Forms.Label();
+            this.rtxtDescription = new System.Windows.Forms.RichTextBox();
+            this.txtAvalible = new System.Windows.Forms.TextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.lblIsAvalible = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.btnAddMovie = new System.Windows.Forms.Button();
+            this.btnDeleteMovie = new System.Windows.Forms.Button();
+            this.btnWriteMovieText = new System.Windows.Forms.Button();
+            this.btnReadMovieText = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnPreviousMovie = new System.Windows.Forms.Button();
+            this.btnNextMovie = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +78,7 @@
             this.groupBox1.Controls.Add(this.rtxtDescription);
             this.groupBox1.Controls.Add(this.txtAvalible);
             this.groupBox1.Controls.Add(this.txtTitle);
-            this.groupBox1.Controls.Add(this.lblNumberAvalible);
+            this.groupBox1.Controls.Add(this.lblIsAvalible);
             this.groupBox1.Controls.Add(this.lblTitle);
             this.groupBox1.Controls.Add(this.lblDescription);
             this.groupBox1.Location = new System.Drawing.Point(13, 12);
@@ -87,119 +87,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Movie Information";
-            // 
-            // rtxtDescription
-            // 
-            this.rtxtDescription.Location = new System.Drawing.Point(326, 45);
-            this.rtxtDescription.Name = "rtxtDescription";
-            this.rtxtDescription.Size = new System.Drawing.Size(181, 154);
-            this.rtxtDescription.TabIndex = 9;
-            this.rtxtDescription.Text = "";
-            // 
-            // txtAvalible
-            // 
-            this.txtAvalible.Location = new System.Drawing.Point(133, 45);
-            this.txtAvalible.Name = "txtAvalible";
-            this.txtAvalible.Size = new System.Drawing.Size(41, 20);
-            this.txtAvalible.TabIndex = 7;
-            // 
-            // txtTitle
-            // 
-            this.txtTitle.Location = new System.Drawing.Point(19, 45);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(100, 20);
-            this.txtTitle.TabIndex = 1;
-            // 
-            // lblNumberAvalible
-            // 
-            this.lblNumberAvalible.AutoSize = true;
-            this.lblNumberAvalible.Location = new System.Drawing.Point(130, 29);
-            this.lblNumberAvalible.Name = "lblNumberAvalible";
-            this.lblNumberAvalible.Size = new System.Drawing.Size(84, 13);
-            this.lblNumberAvalible.TabIndex = 5;
-            this.lblNumberAvalible.Text = "Number Avalible";
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(16, 29);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(27, 13);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Title";
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(323, 29);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(60, 13);
-            this.lblDescription.TabIndex = 4;
-            this.lblDescription.Text = "Description";
-            // 
-            // btnAddMovie
-            // 
-            this.btnAddMovie.Location = new System.Drawing.Point(8, 226);
-            this.btnAddMovie.Name = "btnAddMovie";
-            this.btnAddMovie.Size = new System.Drawing.Size(115, 61);
-            this.btnAddMovie.TabIndex = 1;
-            this.btnAddMovie.Text = "Add Movie";
-            this.btnAddMovie.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteMovie
-            // 
-            this.btnDeleteMovie.Location = new System.Drawing.Point(129, 226);
-            this.btnDeleteMovie.Name = "btnDeleteMovie";
-            this.btnDeleteMovie.Size = new System.Drawing.Size(115, 61);
-            this.btnDeleteMovie.TabIndex = 2;
-            this.btnDeleteMovie.Text = "Delete Movie";
-            this.btnDeleteMovie.UseVisualStyleBackColor = true;
-            // 
-            // btnWriteMovieText
-            // 
-            this.btnWriteMovieText.Location = new System.Drawing.Point(550, 12);
-            this.btnWriteMovieText.Name = "btnWriteMovieText";
-            this.btnWriteMovieText.Size = new System.Drawing.Size(94, 23);
-            this.btnWriteMovieText.TabIndex = 3;
-            this.btnWriteMovieText.Text = "Write to Text";
-            this.btnWriteMovieText.UseVisualStyleBackColor = true;
-            // 
-            // btnReadMovieText
-            // 
-            this.btnReadMovieText.Location = new System.Drawing.Point(550, 46);
-            this.btnReadMovieText.Name = "btnReadMovieText";
-            this.btnReadMovieText.Size = new System.Drawing.Size(94, 23);
-            this.btnReadMovieText.TabIndex = 4;
-            this.btnReadMovieText.Text = "Read From Text";
-            this.btnReadMovieText.UseVisualStyleBackColor = true;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(527, 226);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(115, 59);
-            this.btnBack.TabIndex = 12;
-            this.btnBack.Text = "Back to Menu";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnPreviousMovie
-            // 
-            this.btnPreviousMovie.Location = new System.Drawing.Point(529, 145);
-            this.btnPreviousMovie.Name = "btnPreviousMovie";
-            this.btnPreviousMovie.Size = new System.Drawing.Size(113, 23);
-            this.btnPreviousMovie.TabIndex = 19;
-            this.btnPreviousMovie.Text = "Previous Movie";
-            this.btnPreviousMovie.UseVisualStyleBackColor = true;
-            // 
-            // btnNextMovie
-            // 
-            this.btnNextMovie.Location = new System.Drawing.Point(531, 116);
-            this.btnNextMovie.Name = "btnNextMovie";
-            this.btnNextMovie.Size = new System.Drawing.Size(113, 23);
-            this.btnNextMovie.TabIndex = 18;
-            this.btnNextMovie.Text = "Next Movie";
-            this.btnNextMovie.UseVisualStyleBackColor = true;
             // 
             // radSciFi
             // 
@@ -351,6 +238,119 @@
             this.lblGenre.TabIndex = 22;
             this.lblGenre.Text = "Genre(Select One)";
             // 
+            // rtxtDescription
+            // 
+            this.rtxtDescription.Location = new System.Drawing.Point(326, 45);
+            this.rtxtDescription.Name = "rtxtDescription";
+            this.rtxtDescription.Size = new System.Drawing.Size(181, 154);
+            this.rtxtDescription.TabIndex = 9;
+            this.rtxtDescription.Text = "";
+            // 
+            // txtAvalible
+            // 
+            this.txtAvalible.Location = new System.Drawing.Point(133, 45);
+            this.txtAvalible.Name = "txtAvalible";
+            this.txtAvalible.Size = new System.Drawing.Size(41, 20);
+            this.txtAvalible.TabIndex = 7;
+            // 
+            // txtTitle
+            // 
+            this.txtTitle.Location = new System.Drawing.Point(19, 45);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(100, 20);
+            this.txtTitle.TabIndex = 1;
+            // 
+            // lblIsAvalible
+            // 
+            this.lblIsAvalible.AutoSize = true;
+            this.lblIsAvalible.Location = new System.Drawing.Point(130, 29);
+            this.lblIsAvalible.Name = "lblIsAvalible";
+            this.lblIsAvalible.Size = new System.Drawing.Size(60, 13);
+            this.lblIsAvalible.TabIndex = 5;
+            this.lblIsAvalible.Text = "Is avalible?";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Location = new System.Drawing.Point(16, 29);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(27, 13);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "Title";
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Location = new System.Drawing.Point(323, 29);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(60, 13);
+            this.lblDescription.TabIndex = 4;
+            this.lblDescription.Text = "Description";
+            // 
+            // btnAddMovie
+            // 
+            this.btnAddMovie.Location = new System.Drawing.Point(8, 226);
+            this.btnAddMovie.Name = "btnAddMovie";
+            this.btnAddMovie.Size = new System.Drawing.Size(115, 61);
+            this.btnAddMovie.TabIndex = 1;
+            this.btnAddMovie.Text = "Add Movie";
+            this.btnAddMovie.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteMovie
+            // 
+            this.btnDeleteMovie.Location = new System.Drawing.Point(129, 226);
+            this.btnDeleteMovie.Name = "btnDeleteMovie";
+            this.btnDeleteMovie.Size = new System.Drawing.Size(115, 61);
+            this.btnDeleteMovie.TabIndex = 2;
+            this.btnDeleteMovie.Text = "Delete Movie";
+            this.btnDeleteMovie.UseVisualStyleBackColor = true;
+            // 
+            // btnWriteMovieText
+            // 
+            this.btnWriteMovieText.Location = new System.Drawing.Point(550, 12);
+            this.btnWriteMovieText.Name = "btnWriteMovieText";
+            this.btnWriteMovieText.Size = new System.Drawing.Size(94, 23);
+            this.btnWriteMovieText.TabIndex = 3;
+            this.btnWriteMovieText.Text = "Write to Text";
+            this.btnWriteMovieText.UseVisualStyleBackColor = true;
+            // 
+            // btnReadMovieText
+            // 
+            this.btnReadMovieText.Location = new System.Drawing.Point(550, 46);
+            this.btnReadMovieText.Name = "btnReadMovieText";
+            this.btnReadMovieText.Size = new System.Drawing.Size(94, 23);
+            this.btnReadMovieText.TabIndex = 4;
+            this.btnReadMovieText.Text = "Read From Text";
+            this.btnReadMovieText.UseVisualStyleBackColor = true;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(527, 226);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(115, 59);
+            this.btnBack.TabIndex = 12;
+            this.btnBack.Text = "Back to Menu";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnPreviousMovie
+            // 
+            this.btnPreviousMovie.Location = new System.Drawing.Point(529, 145);
+            this.btnPreviousMovie.Name = "btnPreviousMovie";
+            this.btnPreviousMovie.Size = new System.Drawing.Size(113, 23);
+            this.btnPreviousMovie.TabIndex = 19;
+            this.btnPreviousMovie.Text = "Previous Movie";
+            this.btnPreviousMovie.UseVisualStyleBackColor = true;
+            // 
+            // btnNextMovie
+            // 
+            this.btnNextMovie.Location = new System.Drawing.Point(531, 116);
+            this.btnNextMovie.Name = "btnNextMovie";
+            this.btnNextMovie.Size = new System.Drawing.Size(113, 23);
+            this.btnNextMovie.TabIndex = 18;
+            this.btnNextMovie.Text = "Next Movie";
+            this.btnNextMovie.UseVisualStyleBackColor = true;
+            // 
             // frmMovieOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,6 +366,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmMovieOptions";
             this.Text = "frmMovieOptions";
+            this.Load += new System.EventHandler(this.frmMovieOptions_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -377,7 +378,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblDescription;
-        private System.Windows.Forms.Label lblNumberAvalible;
+        private System.Windows.Forms.Label lblIsAvalible;
         private System.Windows.Forms.RichTextBox rtxtDescription;
         private System.Windows.Forms.TextBox txtAvalible;
         private System.Windows.Forms.TextBox txtTitle;
