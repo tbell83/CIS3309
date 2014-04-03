@@ -11,10 +11,10 @@ using Movie_Rental_System;
 using File_Reader;
 
 namespace MovieRentalGUI{
-    public partial class Form1 : Form{
+    public partial class frmRentalSystem : Form{
         MovieRentalSystem MRS = new MovieRentalSystem();
 
-        public Form1(){
+        public frmRentalSystem(){
             string cust_file = "C:\\Users\\tbell\\Source\\Repos\\CIS3309\\customers.txt";
             string movi_file = "C:\\Users\\tbell\\Source\\Repos\\CIS3309\\movies.txt";
             FileReader read = new FileReader();
@@ -60,12 +60,16 @@ namespace MovieRentalGUI{
             }
         }
 
-        private void btnCustomers_Click(object sender, EventArgs e){
-
+        private void btnCustomers_Click(object sender, EventArgs e)
+        {
+            frmRentalSystem customerOptions = new frmRentalSystem();
+            customerOptions.ShowDialog();
         }
 
-        private void btnMovies_Click(object sender, EventArgs e){
-
+        private void btnMovies_Click(object sender, EventArgs e)
+        {
+            frmRentalSystem movieOptions = new frmRentalSystem();
+            movieOptions.ShowDialog();
         }
 
     }

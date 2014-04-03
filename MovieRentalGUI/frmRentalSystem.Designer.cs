@@ -1,6 +1,6 @@
 ﻿namespace MovieRentalGUI
 {
-    partial class Form1
+    partial class frmRentalSystem
     {
         /// <summary>
         /// Required designer variable.
