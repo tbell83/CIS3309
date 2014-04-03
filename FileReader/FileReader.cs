@@ -12,13 +12,20 @@ namespace File_Reader{
         public List<String> readFile(string fileName){
             string line;
             List<String> input = new List<string>();
-            System.IO.StreamReader file = new System.IO.StreamReader(@fileName);
+            StreamReader file = new StreamReader(@fileName);
             while ((line = file.ReadLine()) != null){
-                System.Console.WriteLine (line);
                 input.Add(line);
             }
             file.Close();
             return input;
+        }
+
+        public void writeFile(List<string> input, string fileName){
+            StreamWriter file = new StreamWriter(@fileName);
+            foreach (string item in input){
+                file.WriteLine(item);
+            }
+            file.Close();
         }
     }
 }
