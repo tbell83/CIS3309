@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Movie_Rental_System{
-    public class Movie{
+    public class Movie
+    {
         private string name, rating, genre, description;
         private int status;
 
-        public Movie(string name, string rating, string genre, int status, string description){
+        public Movie(string name, string rating, string genre, /*int status,*/ string description)
+        {
             this.name = name;
             this.rating = rating;
             this.genre = genre;
@@ -20,43 +22,56 @@ namespace Movie_Rental_System{
         public override string ToString()
         {
             string status;
-            if(getStatus() == 0){
+            if (getStatus() == 0)
+            {
                 status = "Available";
-            }else{
+            }
+            else
+            {
                 status = "Rented Out";
             }
             string output = getName() + ", " + getRating() + ", " + getGenre() + ", " + status;
             return output;
         }
 
-        public string getName(){
+        public string getName()
+        {
             return name;
         }
 
-        public int getStatus(){
+        public int getStatus()
+        {
             return status;
         }
 
-        public string getRating(){
+        public string getRating()
+        {
             return rating;
         }
 
-        public string getGenre(){
+        public string getGenre()
+        {
             return genre;
         }
 
-        public string getDescription(){
+        public string getDescription()
+        {
             return description;
         }
 
-        public void CheckIn(){
+        public void CheckIn()
+        {
             status = 0;
         }
 
-        public bool CheckOut(int CID){
-            if (status != 0){
+        public bool CheckOut(int CID)
+        {
+            if (status != 0)
+            {
                 return false;
-            }else{
+            }
+            else
+            {
                 status = CID;
                 return true;
             }

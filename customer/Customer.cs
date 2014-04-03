@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 using System.Collections;
 
 namespace Movie_Rental_System{
-    public class Customer{
+    public class Customer
+    {
         private string FName, LName, address, phone;
         private double balance;
         private int CID;
         private DateTime DOB;
 
-        public Customer(string FName, string LName, string address, string phone, double balance, DateTime DOB, int CID){
+        public Customer(string FName, string LName, string address, string phone, /*double balance, DateTime DOB,*/ int CID)
+        {
             this.FName = FName;
             this.LName = LName;
             this.address = address;
@@ -22,48 +24,59 @@ namespace Movie_Rental_System{
             this.CID = CID;
         }
 
-        public override string ToString(){
+        public override string ToString()
+        {
             string output = getFName() + " " + getLName() + ", " + getAddress() + ", " + getPhone() + ", " + getDOB().ToShortDateString() + ", " + getCID();
             return output;
         }
 
-        public double getBalance(){
+        public double getBalance()
+        {
             return balance;
         }
 
-        public string fullName(){
+        public string fullName()
+        {
             return string.Concat(FName + " " + LName);
         }
 
-        public string getFName(){
+        public string getFName()
+        {
             return FName;
         }
 
-        public string getLName(){
+        public string getLName()
+        {
             return LName;
         }
 
-        public string getPhone(){
+        public string getPhone()
+        {
             return phone;
         }
 
-        public int getCID(){
+        public int getCID()
+        {
             return CID;
         }
 
-        public string getAddress(){
+        public string getAddress()
+        {
             return address;
         }
 
-        public DateTime getDOB(){
+        public DateTime getDOB()
+        {
             return DOB;
         }
 
-        public void changeAddress(string address){
+        public void changeAddress(string address)
+        {
             this.address = address;
         }
 
-        public void changeBalance(double change){
+        public void changeBalance(double change)
+        {
             balance = balance + change;
         }
     }
