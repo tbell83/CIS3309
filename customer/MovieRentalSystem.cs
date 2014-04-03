@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using File_Reader;
 
 namespace Movie_Rental_System{
     public class MovieRentalSystem{
@@ -34,6 +35,20 @@ namespace Movie_Rental_System{
             int CID = Convert.ToInt16(user[6]);
             Customer customer = new Customer(FName, LName, address, phone, balance, DOB, CID);
             customers.Add(customer);
+        }
+
+        public void writeOut(string movie_db, string customer_db){
+            FileReader file = new FileReader();
+            List<string> movies_to_write = new List<string>();
+            List<string> customers_to_write = new List<string>();
+            foreach(Movie item in movies){
+                 movies_to_write.Add(item.getName() + ";"+ item.getRating() + ";" + item.getGenre() + ";" + item.getStatus() + ";" + item.getDescription());
+            }
+            foreach(Customer item in customers){
+                customers_to_write.Add(item.getFName() + ";" + item.getLName() + ";" + item.getAddress() + ";" + item.getPhone() + ";" + item.getBalance() + ";" + item.getDOB() + ";" + item.getCID());
+            }
+            file.writeFile(movies_to_write, movie_db);
+            file.writeFile(customers_to_write, customer_db);
         }
 
         public Customer getCustomer(int index){
