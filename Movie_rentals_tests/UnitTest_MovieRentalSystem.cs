@@ -76,5 +76,20 @@ namespace Movie_rentals_tests
             List<int> results = MRS.findMovie("Blade Runner");
             results.ForEach(delegate(int item) { MRS.removeMovie(item); });
         }
+
+        [TestMethod]
+        public void TestListMovie(){
+            MovieRentalSystem MRS = new MovieRentalSystem();
+            List<string> movies = new List<string>();
+            movies.Add(test_movie1);
+            movies.Add(test_movie2);
+            movies.Add(test_movie3);
+            MRS.addMovie(test_movie1);
+            MRS.addMovie(test_movie2);
+            MRS.addMovie(test_movie3);
+            for (int i = 0; i <= movies.Count; i++){
+                Assert.AreEqual(movies[i], MRS.listMovie(i));
+            }
+        }
     }
 }
