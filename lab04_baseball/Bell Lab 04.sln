@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baseball Simulator 2014", "Baseball Simulator 2014\Baseball Simulator 2014.csproj", "{C672C0FC-7A8F-445B-A394-8B88D8A50378}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C672C0FC-7A8F-445B-A394-8B88D8A50378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C672C0FC-7A8F-445B-A394-8B88D8A50378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C672C0FC-7A8F-445B-A394-8B88D8A50378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C672C0FC-7A8F-445B-A394-8B88D8A50378}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
